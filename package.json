@@ -1,0 +1,25 @@
+{
+  "name": "animated-burger-menu",
+  "version": "1.0.0",
+  "description": "An off-canvas sidebar React component with a collection of effects and styles using CSS transitions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yakushinang/animated-burger-menu.git"
+  },
+  "keywords": [
+    "burgermenu",
+    "menu",
+    "burger",
+    "animated"
+  ],
+  "author": "Angelika Yakushin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yakushinang/animated-burger-menu/issues"
+  },
+  "homepage": "https://github.com/yakushinang/animated-burger-menu#readme"
+}
