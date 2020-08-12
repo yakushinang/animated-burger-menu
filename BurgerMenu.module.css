@@ -7,12 +7,15 @@
     display: inline-block;
     cursor: pointer;
     width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    border-radius: 5px;
   }
   .bar1, .bar2, .bar3 {
     width: 100%;
     height: 5px;
     background-color: #ceff7a;
     margin: 0 0;   
+    border-radius: 5px;
   }
   .bar2{
     margin: 6px 0;
@@ -35,7 +38,7 @@
     left: 0;
     background-color: rgb(40,44,52,0.9) ; 
     overflow: hidden;
-    transition: 0.5s;
+    transition: 0.5s ease-out;
   }
   .bm_links_container ul{
     position: relative;
@@ -44,6 +47,7 @@
     text-align: center;
     margin-top: 30px;
     list-style-type: none;
+    padding-left: 0px;;
   }
   .bm_links_container li {
     padding: 8px;
@@ -55,6 +59,11 @@
   .bm_links_container li *{
     cursor: pointer;
     font-size: 36px;
+    background-color: transparent;
+    color: #ceff7a;
+    -webkit-tap-highlight-color: transparent;
+    border: none;
+    outline:none;
   }
   .bm_links_container li *:hover, 
   #bm_links_container li *:focus {
@@ -80,4 +89,22 @@
   }
   .opened .fallDown{
     height: 100% !important;
+  }
+
+  /* dote left */
+  .doteLeft{
+    position: fixed;
+    /* background: #204b56; */
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(35px at 0% -10%);
+    -webkit-clip-path: circle(35px at 0% -10%);
+    transition: 0.5s ease-out;
+    pointer-events: none;
+  }
+  .opened .doteLeft{
+    clip-path: circle(1000px at 0% -10%);
+    -webkit-clip-path: circle(1000px at 0% -10%);
+    pointer-events: all;
   }

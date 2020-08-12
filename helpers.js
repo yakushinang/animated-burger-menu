@@ -7,6 +7,10 @@ const MENU_ANIMATIONS_TYPES = {
     fallDown:{
         value: 'fallDown',
         className: 'fallDown' 
+    },
+    doteLeft:{
+        value: 'doteLeft',
+        className: 'doteLeft'
     }
 }
 
@@ -25,12 +29,12 @@ function cn(){
 
 export function applyButtonElementsStyles(buttonWidth , buttonHeight, transitionTime, menuBarTop, buttonBorder){
 
-    const WITH_BORDER_SIZE_RATIO = 0.8
-    const WITH_BORDER_PADDING_RATIO = 0.2
-    const NONE_BORDER_SIZE_RATIO = 0.9
-    const NONE_BORDER_PADDING_RATIO = 0.1
+    const WITH_BORDER_SIZE_RATIO = 0.70
+    const WITH_BORDER_PADDING_RATIO = 0.3
+    const NONE_BORDER_SIZE_RATIO = 1
+    const NONE_BORDER_PADDING_RATIO = 0
 
-    const padding = buttonBorder? (buttonHeight*WITH_BORDER_PADDING_RATIO/2-1) + "px " +( buttonWidth*WITH_BORDER_PADDING_RATIO/2-1) + "px" : (buttonHeight*NONE_BORDER_PADDING_RATIO/2) + "px " +( buttonWidth*NONE_BORDER_PADDING_RATIO/2)+ "px"
+    const padding = buttonBorder? (buttonHeight*WITH_BORDER_PADDING_RATIO/2-1) + "px " : (buttonHeight*NONE_BORDER_PADDING_RATIO/2) + "px " +( buttonWidth*NONE_BORDER_PADDING_RATIO/2)+ "px"
     const newWidth = buttonBorder ? buttonWidth*WITH_BORDER_SIZE_RATIO : buttonWidth *NONE_BORDER_SIZE_RATIO
     const newHeight = buttonBorder ? buttonHeight*WITH_BORDER_SIZE_RATIO : buttonHeight *NONE_BORDER_SIZE_RATIO
     const border = buttonBorder ? "solid 1px #ceff7a" : " none"
@@ -53,7 +57,7 @@ export function applyButtonElementsStyles(buttonWidth , buttonHeight, transition
         middleLineStyle: {
             height : newWidth / 7 +"px",
             margin : newWidth / 5.83 + "px 0",
-            transition: transitionTime + "s"
+            transition: transitionTime 
         },
         topLineOpenedStyle: {transform: `rotate(-45deg) translate(-${midLineHeight}px, ${midLineHeight}px)`},
         bottomLineOpenedStyle: { transform: `rotate(45deg) translate(-${midLineHeight}px, -${midLineHeight}px)`},
@@ -80,7 +84,7 @@ export function calculateButtonDimensions(width, parantWidth, height, parantHeig
         if(Number.isInteger(width)) return calculateButtonDimensions(width, WIDTH_MODIFIER)
         if( width === "auto")       return calculateButtonDimensions(parantWidth , WIDTH_MODIFIER) 
     }
-    return calculateButtonDimensions(35, HEIGHT_MODIFIER)
+    return calculateButtonDimensions(27, HEIGHT_MODIFIER)
 }
 
 export function finalizeLineSyles(isOpened , topBottLinesStyle, topLineOpenedStyle, bottomLineOpenedStyle){

@@ -37,6 +37,7 @@ export const useBurgerButton = (onEntering, onEntered, onEnter, onExit, onExitin
     }
    
     const toggle = () => {
+          isOpened  ? document.body.style.overflow = 'unset' : document.body.style.overflow = 'hidden'
         isOpened ? typeofFunc(onExit) : typeofFunc(onEnter)
         setIsOpened((preState)=>{
             return !preState
