@@ -1,6 +1,6 @@
 {
   "name": "animated-burger-menu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An off-canvas sidebar React component with a collection of effects and styles using CSS transitions.",
   "main": "index.js",
   "scripts": {
